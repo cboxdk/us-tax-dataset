@@ -74,8 +74,10 @@ and record deltas. `CHANGELOG.md` carries the full history.
 
 ## License
 
-Free for noncommercial use under the
-[PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/) —
-see [LICENSE.md](LICENSE.md). Commercial use (including reselling the dataset
-or bundling it in a paid product or service) requires a commercial license
-from Cbox — open an issue in this repository to get in touch.
+Free for your own internal business use — **commercial included** — under the
+[PolyForm Internal Use License 1.0.0](https://polyformproject.org/licenses/internal-use/1.0.0/);
+see [LICENSE.md](LICENSE.md). Computing the taxes on your own sales is
+covered. Distributing the dataset — reselling it, bundling it into a product,
+or offering it (or a rate-lookup service over it) to third parties — requires
+a commercial license from Cbox; open an issue in this repository to get in
+touch.

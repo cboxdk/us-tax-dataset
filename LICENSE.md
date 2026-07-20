@@ -1,14 +1,20 @@
 # License
 
 The dataset published in this repository (`us-tax-dataset.json` and its
-release assets) is licensed under the **PolyForm Noncommercial License
-1.0.0**: https://polyformproject.org/licenses/noncommercial/1.0.0/
+release assets) is licensed under the **PolyForm Internal Use License
+1.0.0**: https://polyformproject.org/licenses/internal-use/1.0.0/
 
-In short: you may use, copy, modify and build on the dataset for any
-noncommercial purpose. Commercial use — including reselling the dataset,
-offering it as part of a paid product or service, or distributing it for
-commercial advantage — requires a separate commercial license from Cbox.
-Open an issue in this repository to get in touch.
+In short: you may use the dataset for your own internal business purposes —
+**including commercial use**, such as computing the taxes on your own sales.
+What you may not do is distribute it: reselling the dataset, redistributing
+it, bundling it into a product you ship, or providing it (or a lookup service
+over it) to third parties all require a separate commercial license from
+Cbox. Open an issue in this repository to get in touch.
+
+To be concrete about the line: charging your customers invoices whose tax
+amounts you computed using this dataset is internal use and fine; giving your
+customers the rates themselves — as data, an API, or a feature of your
+product — is distribution and is not covered.
 
 Notes, stated honestly:
 
