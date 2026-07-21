@@ -19,13 +19,16 @@ shasum -a 256 -c us-tax-dataset.json.sha256
 ```
 
 or fetch `us-tax-dataset.json` from this repository at a release tag. Releases
-are semver-tagged; see [Versioning](#versioning).
+are semver-tagged; see [Versioning](#versioning). A JSON Schema describing
+the artifact ships with every release (`us-tax-dataset.schema.json`) —
+validate against it, and remember that additive fields are not breaking.
 
 ## What's inside
 
 | Layer | Coverage | Source mode |
 | --- | --- | --- |
-| Local rates | 28 states (24 SST member states, TX, CA, AL, IL) | Official state files, fetched and hashed every build |
+| Local rates | 32 states (24 SST members, TX, CA, AL, IL, AK, NM, MO, AZ) | Official state files, fetched and hashed every build (AZ via a manually refreshed official file, staleness-alarmed) |
+| Local rates, curated | 7 states (FL, NY, SC, VA, PA, HI, MS) | Official DOR charts/publications, curated per edition with dated citations |
 | State baseline | All 50 states + DC | Curated from a dated national compilation; cross-checked against the official files on every build |
 | Economic-nexus thresholds | 47 jurisdictions | Curated, dated citation per figure; staleness-alarmed |
 | SaaS (`digital_service`) taxability | 40 states | Curated, dated citation; only clear determinations; staleness-alarmed |
