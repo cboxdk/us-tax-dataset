@@ -1,5 +1,70 @@
 # Changelog
 
+## v0.4.0 — 2026-07-22
+
+Coverage: 41 states with official-file local rates, 5 complete with their state rate alone, 1 state-rate-only with locals missing, 4 without a general sales tax; 19753 rate records in total.
+- Content changed without a source-file change (curated overlay or compiler update).
+
+<details>
+<summary><strong>Per-state coverage & confidence matrix</strong> (all 51 jurisdictions, four planes)</summary>
+
+| State | Confidence | Rates | Nexus | Taxability | Sourcing | Flags |
+| --- | --- | --- | --- | --- | --- | --- |
+| US-AK | Full | 56 records (official, component) | ✓ | — | destination | no taxability determinations; see state note |
+| US-AL | Full | 687 records (official, component) | ✓ | 20 | destination | see state note |
+| US-AR | Full | 576 records (official, component) | ✓ | 24 | destination | — |
+| US-AZ | Full | 146 records (official, component) | ✓ | 25 | origin | see state note |
+| US-CA | Full | 540 records (official, combined) | ✓ | 23 | mixed | see state note |
+| US-CO | Full | 288 records (official, component) | ✓ | 23 | destination | see state note |
+| US-CT | Complete | state rate (curated, cited) | ✓ | 25 | destination | — |
+| US-DC | Complete | state rate (curated, cited) | ✓ | 22 | destination | — |
+| US-DE | n/a | no general sales tax | — | 24 | — | see baseline note |
+| US-FL | Full (curated) | 67 records (curated, cited, component) | ✓ | 23 | destination | see state note |
+| US-GA | Full | 170 records (official, component) | ✓ | 23 | destination | — |
+| US-HI | Full (curated) | 4 records (curated, cited, component) | ✓ | 25 | destination | see state note |
+| US-IA | Full | 1214 records (official, component) | ✓ | 22 | destination | — |
+| US-ID | **Partial** | state rate only (curated, cited) | ✓ | 24 | destination | local taxes exist that this dataset does not carry; see baseline note |
+| US-IL | Full | 1325 records (official, combined) | ✓ | 23 | mixed | 218 locations excluded (intra-location variance) |
+| US-IN | Full | 1 record (official, component) | ✓ | 23 | destination | — |
+| US-KS | Full | 2146 records (official, component) | ✓ | 21 | destination | — |
+| US-KY | Full | 1 record (official, component) | ✓ | 23 | destination | — |
+| US-LA | Full | 429 records (official, component) | ✓ | 25 | destination | 3 locations excluded (intra-location variance) |
+| US-MA | Complete | state rate (curated, cited) | ✓ | 24 | destination | — |
+| US-MD | Complete | state rate (curated, cited) | ✓ | 23 | destination | — |
+| US-ME | Complete | state rate (curated, cited) | ✓ | 23 | destination | — |
+| US-MI | Full | 1 record (official, component) | ✓ | 24 | destination | — |
+| US-MN | Full | 138 records (official, component) | ✓ | 23 | destination | — |
+| US-MO | Full | 2550 records (official, combined) | ✓ | 24 | origin | see state note |
+| US-MS | Full (curated) | 2 records (curated, cited, component) | ✓ | 22 | origin | see state note |
+| US-MT | n/a | no general sales tax | — | 24 | — | see baseline note |
+| US-NC | Full | 106 records (official, component) | ✓ | 24 | destination | — |
+| US-ND | Full | 406 records (official, component) | ✓ | 23 | destination | — |
+| US-NE | Full | 277 records (official, component) | ✓ | 24 | destination | — |
+| US-NH | n/a | no general sales tax | — | 24 | — | see baseline note |
+| US-NJ | Full | 1 record (official, component) | ✓ | 23 | destination | — |
+| US-NM | Full | 206 records (official, combined) | ✓ | 25 | destination | 41 locations excluded (intra-location variance) |
+| US-NV | Full | 27 records (official, component) | ✓ | 25 | destination | — |
+| US-NY | Full (curated) | 59 records (curated, cited, component) | ✓ | 25 | destination | see state note |
+| US-OH | Full | 105 records (official, component) | ✓ | 23 | origin | — |
+| US-OK | Full | 1620 records (official, component) | ✓ | 23 | destination | — |
+| US-OR | n/a | no general sales tax | — | 24 | — | see baseline note |
+| US-PA | Full (curated) | 2 records (curated, cited, component) | ✓ | 23 | origin | see state note |
+| US-RI | Full | 1 record (official, component) | ✓ | 24 | destination | — |
+| US-SC | Full (curated) | 47 records (curated, cited, component) | ✓ | 23 | destination | see state note |
+| US-SD | Full | 327 records (official, component) | ✓ | 25 | destination | — |
+| US-TN | Full | 484 records (official, component) | ✓ | 25 | origin | — |
+| US-TX | Full | 1930 records (official, component) | ✓ | 24 | origin | see state note |
+| US-UT | Full | 211 records (official, component) | ✓ | 24 | origin | — |
+| US-VA | Full (curated) | 39 records (curated, cited, component) | ✓ | 24 | origin | see state note |
+| US-VT | Full | 37 records (official, component) | ✓ | 25 | destination | — |
+| US-WA | Full | 1475 records (official, component) | ✓ | 22 | destination | — |
+| US-WI | Full | 1924 records (official, component) | ✓ | 24 | destination | — |
+| US-WV | Full | 102 records (official, component) | ✓ | 25 | destination | — |
+| US-WY | Full | 26 records (official, component) | ✓ | 24 | destination | — |
+
+Confidence legend: **Full** = official state files for local jurisdictions; **Full (curated)** = complete local coverage maintained by hand from official state pages, dated citation; **Complete** = the curated state rate is the entire rate (no local sales taxes exist); **Partial** = state rate only while local taxes exist that this dataset does not carry; **n/a** = no general sales tax. Taxability is a per-category count (each a source- and benchmark-agreed determination); Sourcing is the intrastate rule. A **SOURCE DOWN** flag means the state's data was served from the committed cache because the live source is unreachable.
+</details>
+
 ## v0.3.0 — 2026-07-22
 
 Coverage: 41 states with official-file local rates, 5 complete with their state rate alone, 1 state-rate-only with locals missing, 4 without a general sales tax; 19753 rate records in total.
