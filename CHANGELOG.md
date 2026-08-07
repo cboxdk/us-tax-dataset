@@ -1,5 +1,11 @@
 # Changelog
 
+## Boundary indexes — 2026-08-07
+
+Quarterly refresh of the ZIP+4 jurisdiction indexes from the SSTGB boundary files: 24 states, 5.4 MB gzipped, 1,062,554 spans. Per-state sizes, hashes and source provenance are in `boundaries/manifest.json`.
+
+These follow the SSTGB's quarterly cadence rather than the dataset release cadence, so they are not tied to a version tag.
+
 ## Boundary indexes — 2026-08-05
 
 Quarterly refresh of the ZIP+4 jurisdiction indexes from the SSTGB boundary files: 24 states, 5.4 MB gzipped, 1,062,554 spans. Per-state sizes, hashes and source provenance are in `boundaries/manifest.json`.
