@@ -2,15 +2,13 @@
 
 ## Boundary indexes — 2026-08-07
 
-Quarterly refresh of the ZIP+4 jurisdiction indexes from the SSTGB boundary files: 24 states, 5.4 MB gzipped, 1,062,554 spans. Per-state sizes, hashes and source provenance are in `boundaries/manifest.json`.
+Refresh of the ZIP+4 jurisdiction indexes from the SSTGB boundary files: 24 states, 5.4 MB gzipped, 1,062,554 spans. Per-state sizes, hashes and source provenance are in `boundaries/manifest.json`.
 
 These follow the SSTGB's quarterly cadence rather than the dataset release cadence, so they are not tied to a version tag.
 
-## Boundary indexes — 2026-08-05
+**Fixed: `zip` is now always a JSON object.** Five member states levy no local sales tax and index to nothing (IN, KY, MI, NJ, RI), and their `zip` was serialized as `[]` rather than `{}`. A consumer treating `zip` as a map read those states fine in PHP and raised in Python — the states with the least to say were the ones breaking the reader. No other field changed, and the indexes resolve identically.
 
-Quarterly refresh of the ZIP+4 jurisdiction indexes from the SSTGB boundary files: 24 states, 5.4 MB gzipped, 1,062,554 spans. Per-state sizes, hashes and source provenance are in `boundaries/manifest.json`.
-
-These follow the SSTGB's quarterly cadence rather than the dataset release cadence, so they are not tied to a version tag.
+This entry also covers the indexes first published on 2026-08-05, which shipped without one.
 
 ## v0.4.3 — 2026-08-05
 
